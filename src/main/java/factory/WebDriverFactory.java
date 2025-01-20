@@ -12,6 +12,8 @@ public class WebDriverFactory {
         String projectPath = System.getProperty("user.dir");
         String chromeDriverPath = projectPath + "\\chromedriver.exe";
 
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-popup-blocking");
